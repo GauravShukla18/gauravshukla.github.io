@@ -3,20 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gaurav Shukla</title>
+  <title>Gaurav Shukla | Quantum Optics Researcher</title>
   <style>
     body {
-      font-family: Georgia, serif;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
       margin: 0;
       padding: 0;
       background: #f9f9f9;
-      color: #222;
-      line-height: 1.8;
+      color: #333;
+    }
+    header, footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 1em;
     }
     .container {
-      max-width: 850px;
+      max-width: 1000px;
       margin: auto;
-      padding: 2rem;
+      padding: 1em;
       background: white;
     }
     h1 {
@@ -24,7 +30,8 @@
       margin-bottom: 0;
     }
     h2 {
-      border-bottom: 2px solid #ccc;
+      border-bottom: 2px solid #003366;
+      padding-bottom: 0.3em;
       margin-top: 2rem;
     }
     .profile {
@@ -37,21 +44,23 @@
       padding-left: 1.2em;
     }
     a {
-      color: #0055aa;
+      color: #003366;
       text-decoration: none;
+    }
+    .links a {
+      display: inline-block;
+      margin-right: 15px;
+      color: #003366;
     }
     footer {
       text-align: center;
       font-size: 0.9em;
-      color: #666;
+      color: white;
       margin-top: 4rem;
       padding-bottom: 2rem;
     }
     .contact, .links {
       margin-top: 1.5rem;
-    }
-    .links a {
-      margin-right: 15px;
     }
     .photo {
       width: 140px;
@@ -69,18 +78,30 @@
       padding: 8px;
       text-align: left;
     }
+    .download-button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      background-color: #003366;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="profile">
-      <img src="myphoto.jpg" alt="Gaurav Shukla" class="photo">
-      <h1>Gaurav SHUKLA</h1>
-      <p>Ph.D. researcher in Physics at Banaras Hindu University (India).</p>
-    </div>
+  <header>
+    <h1>Gaurav Shukla</h1>
+    <p>Ph.D. Student, Department of Physics<br>Banaras Hindu University, Varanasi, India</p>
+  </header>
 
+  
     <div class="section">
       <h2>Welcome!</h2>
+      <p>Welcome to my academic homepage! I am a Ph.D. scholar at Banaras Hindu University, focusing on quantum optics, nonlinear interactions, and quantum metrology. This page highlights my research, publications, and professional journey.</p>
+    </div>
+    <div class="profile">
+      <img src="myphoto.jpg" alt="Gaurav Shukla" class="photo">
       <p>I am a Ph.D. researcher at Banaras Hindu University working in the group of Prof. Devendra Kumar Mishra. My work focuses on quantum optics, nonlinear and interferometric metrology using nonclassical light. I've collaborated with international labs including those at the University of Hamburg and Max Planck Institute. Broadly, I am interested in quantum metrology, two-photon absorption, and the design of quantum-enhanced optical setups.</p>
     </div>
 
@@ -152,9 +173,8 @@
 
     <div class="section">
       <h2>Documents</h2>
-      <ul>
-        <li><a href="Gaurav_CV_List_of_Publications.pdf" download>Download CV</a></li>
-      </ul>
+      <p>You can download my complete CV from the link below:</p>
+      <a class="download-button" href="Gaurav_CV_List_of_Publications.pdf" download>Download CV</a>
     </div>
 
     <div class="section contact">
@@ -169,11 +189,10 @@
       <a href="https://orcid.org/0000-0002-8994-1944" target="_blank">ORCID</a>
       <a href="https://twitter.com/GauravS88876292" target="_blank">Twitter</a>
     </div>
-
-    <footer>
-      <p>&copy; Gaurav Shukla. Last updated: June 2025<br>
-      Hosted on GitHub Pages</p>
-    </footer>
   </div>
+
+  <footer>
+    <p>&copy; 2025 Gaurav Shukla | Personal Academic Page</p>
+  </footer>
 </body>
 </html>
