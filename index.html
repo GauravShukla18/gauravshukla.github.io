@@ -1,287 +1,836 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gaurav Shukla | Quantum Optics Researcher</title>
+
+  <meta name="description"
+        content="Academic homepage of Gaurav Shukla, Postdoctoral Researcher at Comenius University Bratislava. Research interests include quantum optics, quantum sensing, spectroscopy, and orbital angular momentum of light.">
+
+  <meta name="author" content="Gaurav Shukla">
+  <meta name="theme-color" content="#12304a">
+
+  <title>Gaurav Shukla | Postdoctoral Researcher</title>
+
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      background: #f9f9f9;
-      color: #333;
+    :root {
+      --primary: #12304a;
+      --primary-light: #1c496b;
+      --accent: #4b91c5;
+      --background: #f3f6fa;
+      --surface: #ffffff;
+      --text: #263445;
+      --muted: #617184;
+      --border: #dce4ed;
+      --radius: 12px;
+      --shadow: 0 5px 22px rgba(18, 48, 74, 0.07);
     }
-    header, footer {
-      background: #003366;
-      color: white;
-      text-align: center;
-      padding: 1em;
-    }
-    .container {
-      width: 95%;
-      max-width: 960px;
-      margin: auto;
-      padding: 1em;
-      background: white;
+
+    * {
       box-sizing: border-box;
     }
-    h1 {
-      font-size: 2em;
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 24px;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--text);
+      background: var(--background);
+    }
+
+    a {
+      color: var(--primary-light);
+      text-decoration: none;
+      overflow-wrap: anywhere;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    a:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 4px;
+      border-radius: 3px;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 12px;
+      z-index: 10;
+      padding: 10px 16px;
+      background: white;
+      color: var(--primary);
+    }
+
+    .skip-link:focus {
+      top: 12px;
+    }
+
+    .site-header {
+      padding: 54px 20px 46px;
+      color: white;
+      text-align: center;
+      background: linear-gradient(
+        135deg,
+        #10283d,
+        #1c496b
+      );
+    }
+
+    .site-header h1 {
+      margin: 0 0 8px;
+      font-size: clamp(2rem, 5vw, 3rem);
+      line-height: 1.2;
+      letter-spacing: -0.7px;
+    }
+
+    .position {
+      margin: 0 0 8px;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    .affiliation {
+      max-width: 760px;
+      margin: 0 auto;
+      color: #e1ebf5;
+      line-height: 1.65;
+    }
+
+    .header-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px 22px;
+      margin-top: 22px;
+    }
+
+    .header-links a {
+      color: white;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .container {
+      width: min(100% - 32px, 1040px);
+      margin: 30px auto;
+    }
+
+    .navigation {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px 20px;
+      padding: 18px 22px;
+      margin-bottom: 22px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .navigation a {
+      font-size: 0.93rem;
+      font-weight: 600;
+    }
+
+    .section {
+      padding: 28px 32px;
+      margin-bottom: 22px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      scroll-margin-top: 20px;
+    }
+
+    .section h2 {
+      margin: 0 0 20px;
+      padding-bottom: 10px;
+      color: var(--primary);
+      font-size: 1.45rem;
+      line-height: 1.4;
+      border-bottom: 2px solid var(--border);
+    }
+
+    .section h3 {
+      color: var(--primary);
+      font-size: 1.08rem;
+      margin: 22px 0 8px;
+    }
+
+    p {
+      margin: 0 0 16px;
+    }
+
+    p:last-child {
       margin-bottom: 0;
     }
-    h2 {
-      border-bottom: 2px solid #003366;
-      padding-bottom: 0.3em;
-      margin-top: 2rem;
-    }
-    .profile {
-      margin-bottom: 1rem;
-    }
-    .section {
-      margin-top: 2rem;
-    }
+
     ul {
-      padding-left: 1.2em;
+      padding-left: 23px;
+      margin: 0;
     }
-    a {
-      color: #003366;
-      text-decoration: none;
+
+    li {
+      margin-bottom: 9px;
     }
-    .links a {
-      display: inline-block;
-      margin-right: 15px;
-      color: #003366;
+
+    .profile-grid {
+      display: grid;
+      grid-template-columns: 175px minmax(0, 1fr);
+      gap: 28px;
+      align-items: start;
     }
-    footer {
-      text-align: center;
-      font-size: 0.9em;
-      color: white;
-      margin-top: 4rem;
-      padding-bottom: 2rem;
-    }
-    .contact, .links {
-      margin-top: 1.5rem;
-    }
+
     .photo {
-      width: 130px;
-      float: right;
-      margin-left: 20px;
-      margin-bottom: 10px;
-      border-radius: 10px;
+      display: block;
+      width: 100%;
+      max-width: 175px;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: center;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
     }
+
+    .profile-text p + p {
+      margin-top: 14px;
+    }
+
+    .research-note {
+      padding: 16px 18px;
+      margin-top: 18px;
+      background: #f0f6fb;
+      border-left: 4px solid var(--accent);
+      border-radius: 4px;
+    }
+
+    .research-note p {
+      margin: 0;
+    }
+
+    .timeline-item {
+      padding-left: 18px;
+      margin-bottom: 22px;
+      border-left: 3px solid var(--accent);
+    }
+
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline-item h3 {
+      margin-top: 0;
+    }
+
+    .muted {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .table-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+
     table {
       width: 100%;
+      min-width: 720px;
       border-collapse: collapse;
-      margin-top: 1rem;
+      font-size: 0.93rem;
     }
-    th, td {
-      border: 1px solid #ccc;
-      padding: 8px;
+
+    th,
+    td {
+      padding: 13px 14px;
       text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid var(--border);
     }
+
+    th {
+      color: white;
+      background: var(--primary);
+      font-weight: 600;
+    }
+
+    tbody tr:nth-child(even) {
+      background: #f7f9fc;
+    }
+
+    tbody tr:last-child td {
+      border-bottom: none;
+    }
+
     .download-button {
       display: inline-block;
-      margin-top: 10px;
-      padding: 10px 15px;
-      background-color: #003366;
+      padding: 11px 19px;
       color: white;
-      text-decoration: none;
-      border-radius: 5px;
+      font-weight: 600;
+      background: var(--primary);
+      border-radius: 7px;
+      transition: background 0.2s ease;
     }
-    @media screen and (max-width: 600px) {
-      .photo {
-        float: none;
-        display: block;
-        margin: 0 auto 15px auto;
+
+    .download-button:hover {
+      background: var(--primary-light);
+      text-decoration: none;
+    }
+
+    .contact-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .contact-list li {
+      margin-bottom: 12px;
+    }
+
+    .contact-label {
+      display: inline-block;
+      min-width: 100px;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 22px;
+      margin-top: 20px;
+    }
+
+    .social-links a {
+      font-weight: 600;
+    }
+
+    .site-footer {
+      padding: 26px 18px;
+      color: #e1ebf5;
+      text-align: center;
+      background: var(--primary);
+    }
+
+    .site-footer p {
+      margin: 4px 0;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 650px) {
+      .site-header {
+        padding: 38px 18px;
       }
+
       .container {
-        padding: 0.5em;
+        width: min(100% - 20px, 1040px);
+        margin: 16px auto;
+      }
+
+      .section {
+        padding: 22px 18px;
+        margin-bottom: 14px;
+      }
+
+      .profile-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .photo {
+        width: 145px;
+        max-width: 100%;
+        margin: 0 auto;
+      }
+
+      .navigation {
+        justify-content: flex-start;
+        gap: 10px 16px;
+        padding: 15px;
+      }
+
+      .section h2 {
+        font-size: 1.3rem;
+      }
+
+      .contact-label {
+        display: block;
+        min-width: 0;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: 0.01ms !important;
       }
     }
   </style>
 </head>
+
 <body>
-  <header>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
     <h1>Gaurav Shukla</h1>
-    <p>Ph. D., Department of Physics, Institute of Science<br>Banaras Hindu University, Varanasi-221005, Uttar Pradesh, India</p>
+
+    <p class="position">Postdoctoral Researcher</p>
+
+    <p class="affiliation">
+      Department of Inorganic Chemistry<br>
+      Faculty of Natural Sciences<br>
+      Comenius University Bratislava, Slovakia
+    </p>
+
+    <nav class="header-links" aria-label="Professional profiles">
+      <a href="https://scholar.google.com/citations?user=mc5oKIAAAAAJ"
+         target="_blank" rel="noopener noreferrer">Google Scholar</a>
+
+      <a href="https://orcid.org/0000-0002-8994-1944"
+         target="_blank" rel="noopener noreferrer">ORCID</a>
+
+      <a href="https://www.researchgate.net/profile/Gaurav-Shukla-21"
+         target="_blank" rel="noopener noreferrer">ResearchGate</a>
+    </nav>
   </header>
 
-  <div class="container">
-    <div class="section">
-      <h2>Welcome!</h2>
-      <p>Welcome to my academic homepage! I am a theoretical physicist specializing in quantum optics and quantum interferometry. In July 2025, I completed my Ph. D. in Physics from the Department of Physics, Institute of Science, Banaras Hindu University (BHU), Varanasi, India. This page highlights my research, publications, and professional journey.</p>
-    </div>
+  <main id="main-content" class="container">
 
-    <div class="profile">
-      <img src="myphoto.jpg" alt="Gaurav Shukla" class="photo">
-      <p> During my doctoral research, I developed theoretical frameworks to mitigate photon loss and improve the phase sensitivity of the Mach-Zehnder interferometer (MZI) and SU(1,1) interferometers. I systematically studied the role of squeezed Kerr states (SKS) and Schrödinger cat-like states in quantum interferometry. Showed that these states offer enhanced phase estimation beyond the standard quantum limit, also outperforming squeezed vacuum states in low-photon cases, important for fields like biological and chemical sensing. We also proposed a dual-output detection scheme for a squeezing-assisted MZI, achieving sub-shot-noise sensitivity over a broad phase range.
-</p>
+    <nav class="navigation" aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#collaborations">Collaborations</a>
+      <a href="#education">Education</a>
+      <a href="#publications">Publications</a>
+      <a href="#awards">Awards</a>
+      <a href="#cv">CV</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-      <p>
-        I look forward to continuing to bridge theoretical innovation and experimental feasibility, contributing to the development of practical, high-impact quantum sensing technologies.
-      </p>
+    <section id="about" class="section">
+      <h2>About Me</h2>
 
-    </div>
+      <div class="profile-grid">
+        <img
+          src="myphoto.jpg"
+          alt="Portrait of Gaurav Shukla"
+          class="photo"
+          width="175"
+          height="219"
+        >
 
-    <div class="profile">
+        <div class="profile-text">
+          <p>
+            Welcome to my academic homepage. I am a theoretical physicist
+            and currently a Postdoctoral Researcher in the Department of
+            Inorganic Chemistry, Faculty of Natural Sciences, Comenius
+            University Bratislava, Slovakia. I completed my Ph.D. in
+            Physics at the Department of Physics, Institute of Science,
+            Banaras Hindu University (BHU), Varanasi, India, in July 2025.
+          </p>
+
+          <p>
+            My doctoral research focused on quantum optics, quantum
+            interferometry, and precision measurement using nonclassical
+            states of light. I investigated strategies for improving phase
+            estimation in Mach–Zehnder and SU(1,1) interferometers,
+            including schemes involving squeezed Kerr states,
+            Schrödinger cat-like states, and alternative detection
+            strategies.
+          </p>
+
+          <p>
+            This work explored how quantum resources and measurement
+            design can improve phase sensitivity, including regimes
+            in which photon loss and practical measurement constraints
+            become important.
+          </p>
+
+          <div class="research-note">
+            <p>
+              <strong>Current direction:</strong>
+              My postdoctoral research extends towards theoretical
+              spectroscopy and light–matter interactions, including
+              relativistic time-dependent density functional theory,
+              X-ray spectroscopy, and light carrying orbital angular
+              momentum.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="research" class="section">
       <h2>Current Research Activities</h2>
-      <ul>
-        <li>Investigating two-photon absorption (TPA) and nonlinear quantum measurement strategies.</li>
-        <li>Exploring orbital angular momentum (OAM) of light for novel OAM cluster generation.</li>
-        <li>Quantum plasmonic sensing: integrating surface plasmon resonance (SPR) with squeezed states to surpass shot-noise limits, enhancing refractive index detection.</li>
-        <li>Developing weak-value amplification (WVA) schemes for precision quantum estimation.</li>
-      </ul>
-        
 
-    </div>
-
-    <div class="section">
-      <h2>Collaborative Research Experience</h2>
       <p>
-        To complement my theoretical work, I have engaged in international collaborations through multiple research visits to Germany. At the Max Planck Institute for the Science of Light, Erlangen, I worked with Prof. Maria Chekhova’s group, where my experimental exposure helped me understand how to design theory that connects meaningfully with real-world scenarios. Later, at the University of Hamburg, I worked in Dr. Frank Schlawin's group purely on theoretical aspects of quantum light–matter interactions and quantum spectroscopy, which gave me a deeper understanding of how to approach theory with greater rigor and physical relevance. These visits have significantly enriched my research perspective and fostered long-term collaborations in the field of quantum optics and sensing.
+        My current research focuses on the theoretical description of
+        light–matter interactions and spectroscopy, with an emphasis on
+        developing more rigorous models for understanding experimental
+        observations.
       </p>
-    </div>
 
-    <div class="section">
-      <h2>Research Interests</h2>
       <ul>
-        <li>Quantum optics and quantum interferometry (SU(2) and SU(1,1) topologies)</li>
-        <li>Quantum sensing and metrology with nonclassical states of light</li>
-        <li>Weak-value amplification (WVA) and quantum estimation theory</li>
-        <li>Orbital angular momentum (OAM) of light and OAM cluster generation</li>
-        <li>Quantum plasmonic sensing with squeezed states & SPR</li>
-        <li>Quantum information protocols and photonic quantum technologies</li>
-        
-      </ul>
-    </div>
+        <li>
+          <strong>Relativistic time-dependent density functional theory:</strong>
+          Exploring relativistic electronic-response methods under the
+          dipole approximation.
+        </li>
 
-    <div class="section">
+        <li>
+          <strong>X-ray spectroscopy:</strong>
+          Investigating the theoretical description of spectroscopic
+          processes in atoms and small molecules.
+        </li>
+
+        <li>
+          <strong>Orbital angular momentum of light:</strong>
+          Exploring light–matter interactions involving structured light
+          and its orbital angular momentum.
+        </li>
+
+        <li>
+          <strong>Quantum spectroscopy:</strong>
+          Drawing on my background in quantum optics to investigate
+          nonclassical light and precision measurement.
+        </li>
+      </ul>
+
+      <h3>Broader Research Interests</h3>
+
+      <ul>
+        <li>Quantum optics and quantum interferometry, including SU(2) and SU(1,1) interferometers.</li>
+        <li>Quantum sensing and metrology using nonclassical states of light.</li>
+        <li>Quantum estimation theory, quantum Fisher information, and phase sensitivity.</li>
+        <li>Two-photon absorption and nonlinear quantum measurement.</li>
+        <li>Weak-value amplification and precision measurement.</li>
+        <li>Quantum plasmonic sensing and surface plasmon resonance.</li>
+        <li>Orbital angular momentum of light and photonic quantum technologies.</li>
+      </ul>
+    </section>
+
+    <section id="collaborations" class="section">
+      <h2>Collaborative Research Experience</h2>
+
+      <div class="timeline-item">
+        <h3>Max Planck Institute for the Science of Light</h3>
+        <p class="muted">Erlangen, Germany | 2019 and 2022</p>
+
+        <p>
+          I visited the research group of Prof. Maria Chekhova, where
+          I gained exposure to experimental quantum optics. This
+          experience helped me connect theoretical questions with
+          experimental considerations and develop a more practical
+          perspective on quantum-light research.
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>University of Hamburg</h3>
+        <p class="muted">Hamburg, Germany | August 2023 – January 2024</p>
+
+        <p>
+          I worked with Dr. Frank Schlawin on theoretical aspects of
+          quantum light–matter interactions and quantum spectroscopy.
+          This collaboration strengthened my interest in rigorous
+          theoretical modelling and the relationship between quantum
+          optical phenomena and spectroscopic observables.
+        </p>
+      </div>
+    </section>
+
+    <section id="education" class="section">
       <h2>Education</h2>
-      <ul>
-        <li>2019–2025: Ph.D. in Physics (BHU, India)</li>
-        <li>2016–2018: M.Sc. in Physics (University of Allahabad)</li>
-        <li>2013–2016: B.Sc. in Physics & Mathematics (TDPG College, VBS Purvanchal University)</li>
-      </ul>
-    </div>
 
-    <div class="section">
+      <div class="timeline-item">
+        <h3>Ph.D. in Physics</h3>
+        <p class="muted">2019–2025 | Banaras Hindu University, Varanasi, India</p>
+        <p>
+          Research area: Quantum interferometric sensing and two-photon
+          absorption estimation with nonclassical states and measurements.
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>M.Sc. in Physics</h3>
+        <p class="muted">2016–2018 | University of Allahabad, India</p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>B.Sc. in Physics and Mathematics</h3>
+        <p class="muted">2013–2016 | TDPG College, VBS Purvanchal University, India</p>
+      </div>
+    </section>
+
+    <section id="publications" class="section">
       <h2>Selected Publications</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Title</th>
-            <th>Journal</th>
-            <th>Year</th>
-            <th>DOI / PDF</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Enhancing Measurement Precision of Non-Degenerate Two-Photon Absorption</td>
-            <td>arXiv Preprint</td>
-            <td>2025</td>
-            <td><a href="https://arxiv.org/abs/2506.07384" target="_blank">arXiv:2506.07384</a></td>
-          </tr>
-          <tr>
-            <td>Quantum-enhanced super-sensitivity of Mach-Zehnder interferometer using squeezed Kerr state</td>
-            <td>APL Quantum</td>
-            <td>2024</td>
-            <td><a href="https://pubs.aip.org/aip/apq/article/1/1/016104/3267229" target="_blank">Link</a></td>
-          </tr>
-          <tr>
-            <td>Improvement in phase-sensitivity of a Mach-Zehnder interferometer with the superposition of Schrödinger’s cat-like state with vacuum state as an input under parity measurement</td>
-            <td>Opt. Quant. Electron.</td>
-            <td>2023</td>
-            <td><a href="https://link.springer.com/article/10.1007/s11082-023-04724-w" target="_blank">Link</a></td>
-          </tr>
-          <tr>
-            <td>Quantum-enhanced super-sensitivity of a Mach–Zehnder interferometer with superposition of Schrödinger’s cat-like state and Fock state as inputs using a two-channel detection</td>
-            <td>JOSA B</td>
-            <td>2022</td>
-            <td><a href="https://opg.optica.org/josab/abstract.cfm?uri=josab-39-1-59" target="_blank">Link</a></td>
-          </tr>
-          <tr>
-            <td>Broadening the high sensitivity range of squeezing-assisted interferometers by means of two-channel detection</td>
-            <td>Optics Express</td>
-            <td>2021</td>
-            <td><a href="https://opg.optica.org/oe/fulltext.cfm?uri=oe-29-1-95&id=445001" target="_blank">PDF</a></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
 
-    <div class="section">
-  <h2>Awards & Grants</h2>
-  <ul>
-    <li>
-      <strong>International Visiting Student Program (2023):</strong> Selected for a prestigious six-month international research support grant under the Institutes of Eminence (IoE), BHU global outreach program.
-    </li>
-    <li>
-      Received the <strong>Research Incentive Grant</strong> from IoE, BHU twice (in August 2022 and April 2024) for publishing research articles in Q1/Q2 peer-reviewed journals.
-    </li>
-    <li>
-      <strong>First Prize</strong> in the poster competition held during the 7th Institute Day Celebration at the Institute of Science, BHU on December 14, 2022.
-    </li>
-  </ul>
-</div>
+      <p>
+        Selected publications and preprints from my research in quantum
+        optics, interferometry, and nonlinear quantum measurement.
+      </p>
 
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Title</th>
+              <th scope="col">Journal / Source</th>
+              <th scope="col">Year</th>
+              <th scope="col">Article</th>
+            </tr>
+          </thead>
 
-    <div class="section">
-      <h2>Curriculum vitae</h2>
-      <p>You can download my complete CV from the link below:</p>
-      <a class="download-button" href="CV, Shukla.pdf" download>Download CV</a>
-    </div>
+         
+<tbody>
+  <tr>
+    <td>
+      V. K. Prajapati, P. Sharma, R. K. Pandey, and
+      <strong>G. Shukla</strong>,
+      “Optimal squeezing for phase estimation in coherent state
+      seeded SU(1,1) interferometer”
+      <br>
+      <span class="muted"><em>Corresponding author</em></span>
+    </td>
+    <td>Physics Letters A</td>
+    <td>2026</td>
+    <td>
+      <a
+        href="https://www.sciencedirect.com/science/article/pii/S0375960126006699?via%3Dihub"
+        target="_blank"
+        rel="noopener noreferrer">
+        Vol. 592, 131995
+      </a>
+    </td>
+  </tr>
 
-    <div class="section contact">
+  <tr>
+    <td>
+      <strong>G. Shukla</strong>, S. Panahiyan, D. K. Mishra,
+      and F. Schlawin,
+      “Enhancing Measurement Precision of Non-Degenerate
+      Two-Photon Absorption”
+    </td>
+    <td>Quantum Science and Technology</td>
+    <td>2025</td>
+    <td>
+      <a
+        href="https://iopscience.iop.org/article/10.1088/2058-9565/aea440"
+        target="_blank"
+        rel="noopener noreferrer">
+        Vol. 11, 045050
+      </a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      Quantum-enhanced super-sensitivity of Mach-Zehnder
+      interferometer using squeezed Kerr state
+    </td>
+    <td>APL Quantum</td>
+    <td>2024</td>
+    <td>
+      <a
+        href="https://pubs.aip.org/aip/apq/article/1/1/016104/3267229"
+        target="_blank"
+        rel="noopener noreferrer">
+        Article
+      </a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      Improvement in phase-sensitivity of a Mach-Zehnder
+      interferometer with the superposition of Schrödinger’s
+      cat-like state with vacuum state as an input under
+      parity measurement
+    </td>
+    <td>Optical and Quantum Electronics</td>
+    <td>2023</td>
+    <td>
+      <a
+        href="https://link.springer.com/article/10.1007/s11082-023-04724-w"
+        target="_blank"
+        rel="noopener noreferrer">
+        Article
+      </a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      Quantum-enhanced super-sensitivity of a Mach–Zehnder
+      interferometer with superposition of Schrödinger’s
+      cat-like state and Fock state as inputs using a
+      two-channel detection
+    </td>
+    <td>JOSA B</td>
+    <td>2022</td>
+    <td>
+      <a
+        href="https://opg.optica.org/josab/abstract.cfm?uri=josab-39-1-59"
+        target="_blank"
+        rel="noopener noreferrer">
+        Article
+      </a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      Broadening the high sensitivity range of
+      squeezing-assisted interferometers by means of
+      two-channel detection
+    </td>
+    <td>Optics Express</td>
+    <td>2021</td>
+    <td>
+      <a
+        href="https://opg.optica.org/oe/fulltext.cfm?uri=oe-29-1-95&id=445001"
+        target="_blank"
+        rel="noopener noreferrer">
+        Full text
+      </a>
+    </td>
+  </tr>
+</tbody>
+        </table>
+      </div>
+
+      <p class="muted" style="margin-top: 14px;">
+        For the complete publication record, please visit my
+        <a href="https://scholar.google.com/citations?user=mc5oKIAAAAAJ"
+           target="_blank" rel="noopener noreferrer">
+          Google Scholar profile
+        </a>.
+      </p>
+    </section>
+
+    <section id="awards" class="section">
+      <h2>Awards and Grants</h2>
+
+      <ul>
+        <li>
+          <strong>International Visiting Student Program (2023):</strong>
+          Selected for six months of international research support
+          under the Institutes of Eminence programme at BHU.
+        </li>
+
+        <li>
+          <strong>Research Incentive Grant:</strong>
+          Received the IoE, BHU research incentive grant twice,
+          in August 2022 and April 2024, for publications in
+          peer-reviewed journals.
+        </li>
+
+        <li>
+          <strong>First Prize in Poster Competition:</strong>
+          Awarded at the 7th Institute Day Celebration, Institute of
+          Science, BHU, on 14 December 2022.
+        </li>
+      </ul>
+    </section>
+
+    <section id="cv" class="section">
+      <h2>Curriculum Vitae</h2>
+
+      <p>
+        For further details about my academic background, research
+        experience, publications, and professional activities, please
+        consult my curriculum vitae.
+      </p>
+
+      <a class="download-button" href="CV, Shukla.pdf" download>
+        Download CV (PDF)
+      </a>
+    </section>
+
+    <section id="contact" class="section">
       <h2>Contact</h2>
-      <p>Email: gaurav.shukla95@zohomail.in; gaurav00jnp@gmail.com; gaurav.shukla18@bhu.ac.in </p>
-      <p>Department of Physics, Institute of Science, Banaras Hindu University, Varanasi-221005, India</p>
-    </div>
 
-    <div class="links">
-      <a href="https://scholar.google.com/citations?user=mc5oKIAAAAAJ" target="_blank">Google Scholar</a>
-      <a href="https://www.researchgate.net/profile/Gaurav-Shukla-21" target="_blank">ResearchGate</a>
-      <a href="https://orcid.org/0000-0002-8994-1944" target="_blank">ORCID</a>
-      <a href="https://twitter.com/GauravS88876292" target="_blank">Twitter</a>
-    </div>
-  </div>
+      <p>
+        Please feel free to contact me regarding research,
+        academic collaborations, and related enquiries.
+      </p>
 
-  <footer>
-    <p>&copy; 2025 Gaurav Shukla | Personal Academic Page</p>
+      <ul class="contact-list">
+        <li>
+          <span class="contact-label">Email:</span>
+          <a href="mailto:gaurav.shukla95@zohomail.in">
+            gaurav.shukla95@zohomail.in
+          </a>
+        </li>
+
+        <li>
+          <span class="contact-label">Email:</span>
+          <a href="mailto:gaurav00jnp@gmail.com">
+            gaurav00jnp@gmail.com
+          </a>
+        </li>
+
+        <li>
+          <span class="contact-label">Previous:</span>
+          <a href="mailto:gaurav.shukla18@bhu.ac.in">
+            gaurav.shukla18@bhu.ac.in
+          </a>
+          <span class="muted">(BHU)</span>
+        </li>
+
+        <li>
+          <span class="contact-label">Affiliation:</span>
+          Department of Inorganic Chemistry, Faculty of Natural
+          Sciences, Comenius University Bratislava, Slovakia.
+        </li>
+      </ul>
+
+      <div class="social-links" aria-label="Academic profiles">
+        <a href="https://scholar.google.com/citations?user=mc5oKIAAAAAJ"
+           target="_blank" rel="noopener noreferrer">Google Scholar</a>
+
+        <a href="https://www.researchgate.net/profile/Gaurav-Shukla-21"
+           target="_blank" rel="noopener noreferrer">ResearchGate</a>
+
+        <a href="https://orcid.org/0000-0002-8994-1944"
+           target="_blank" rel="noopener noreferrer">ORCID</a>
+
+        <a href="https://twitter.com/GauravS88876292"
+           target="_blank" rel="noopener noreferrer">Twitter / X</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      &copy; <span id="current-year">2026</span>
+      Gaurav Shukla. All rights reserved.
+    </p>
+
+    <p>
+      Postdoctoral Researcher | Comenius University Bratislava, Slovakia
+    </p>
   </footer>
+
+  <script>
+    document.getElementById("current-year").textContent =
+      new Date().getFullYear();
+  </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
